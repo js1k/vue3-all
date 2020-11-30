@@ -29,12 +29,12 @@ module.exports = {
         //   },
         // },
     },
-    css: {
-        // 是否将组件中的 CSS 提取至一个独立的 CSS 文件中 (而不是动态注入到 JavaScript 中的 inline 代码)。
-        extract: true,
-        sourceMap: false
+    // css: {
+    //     // 是否将组件中的 CSS 提取至一个独立的 CSS 文件中 (而不是动态注入到 JavaScript 中的 inline 代码)。
+    //     // extract: true,
+    //     sourceMap: false
 
-    },
+    // },
     chainWebpack: config => {
         // config.entity('main').add('babel-polyfill')
         config.module.rule('images')
