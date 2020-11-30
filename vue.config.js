@@ -2,7 +2,9 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const CompressionPlugin = require('compression-webpack-plugin')
 module.exports = {
+    publicPath: './',
     outputDir: 'dist', // 打包的目录
+    // assetsDir: 'static',
     lintOnSave: true, // 在保存时校验格式
     // productionGzip: true,
     productionSourceMap: false, // 生产环境是否生成 SourceMap
@@ -26,6 +28,12 @@ module.exports = {
         //     }
         //   },
         // },
+    },
+    css: {
+        // 是否将组件中的 CSS 提取至一个独立的 CSS 文件中 (而不是动态注入到 JavaScript 中的 inline 代码)。
+        extract: true,
+        sourceMap: false
+
     },
     chainWebpack: config => {
         // config.entity('main').add('babel-polyfill')
